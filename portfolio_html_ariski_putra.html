@@ -1,0 +1,195 @@
+<!--
+Single-file responsive portfolio for Ariski Putra
+How to use:
+1. Save this file as `index.html`.
+2. Open in browser or push to GitHub and enable GitHub Pages (branch: main) to host for free.
+3. Edit the text, images (replace placeholder images), and WhatsApp number.
+-->
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ariski Putra — Desain & Web</title>
+  <meta name="description" content="Portfolio Ariski Putra — Jasa desain poster, landing page, dan website sederhana tanpa modal." />
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#06b6d4; /* teal */
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071023);color:#e6eef6}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:980px;margin:32px auto;padding:20px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo span{font-size:18px}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:20px;padding:22px;background:var(--glass);border-radius:var(--radius);backdrop-filter:blur(6px)}
+    .hero-inner{display:flex;flex-direction:column;gap:12px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021124;font-weight:600}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 14px;border-radius:12px}
+
+    /* sections */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:22px}
+    .card{grid-column:span 12;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px}
+
+    .services{display:flex;gap:12px;flex-wrap:wrap}
+    .service{flex:1 1 200px;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px}
+    .service h3{margin:0 0 6px}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:10px;border-radius:10px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+    .project img{width:100%;height:100px;object-fit:cover;border-radius:8px}
+    .muted{color:var(--muted);font-size:13px}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media(min-width:760px){
+      .hero{grid-template-columns:1fr 360px;align-items:center}
+      .card.wide{grid-column:span 8}
+      .card.side{grid-column:span 4}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>AP</span></div>
+        <div>
+          <h1>Ariski Putra</h1>
+          <p class="lead">Desain Poster · Landing Page · Website Sederhana</p>
+        </div>
+      </div>
+      <nav>
+        <a class="muted" href="#portfolio">Portfolio</a>
+        &nbsp;·&nbsp;
+        <a class="muted" href="#services">Layanan</a>
+        &nbsp;·&nbsp;
+        <a class="muted" href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h2 style="margin:0 0 8px">Butuh desain cepat & profesional tanpa modal besar?</h2>
+          <p class="muted">Saya bantu bikin poster, banner, atau landing page yang siap pakai. Hasil rapi, komunikasi cepat, dan harga terjangkau untuk pelajar/kampus.</p>
+        </div>
+
+        <div class="cta-row">
+          <!-- WhatsApp link updated with your number -->
+          <a class="btn" href="https://wa.me/6282124016379?text=Halo%20Ariski,%20saya%20mau%20pesan%20desain" target="_blank">Pesan Sekarang</a>
+          <a class="btn-ghost" href="#portfolio">Lihat Portfolio</a>
+        </div>
+
+        <div style="margin-top:6px;color:var(--muted);font-size:13px">Harga mulai <strong>Rp10.000</strong> — Paket & revisi tersedia.</div>
+      </div>
+
+      <aside style="padding:18px;display:flex;flex-direction:column;gap:12px;align-items:stretch">
+        <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:12px">
+          <h3 style="margin:0 0 6px">Tentang Saya</h3>
+          <p class="muted" style="margin:0;font-size:13px">Saya Ariski Putra, mahasiswa yang fokus pada desain poster, web sederhana, dan digital kreatif.</p>
+        </div>
+
+        <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:12px">
+          <h3 style="margin:0 0 6px">Testimoni</h3>
+          <div class="muted">"Desainnya cepat dan sesuai!" — Rizky</div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="grid">
+      <div class="card wide" id="services">
+        <h2 style="margin-top:0">Layanan</h2>
+        <div class="services">
+          <div class="service">
+            <h3>Desain Poster & Banner</h3>
+            <p class="muted">Poster event, spanduk, undangan digital — siap cetak atau untuk feed IG.</p>
+          </div>
+          <div class="service">
+            <h3>Landing Page</h3>
+            <p class="muted">Landing page produk atau event yang simpel, responsive, dan cepat diakses.</p>
+          </div>
+          <div class="service">
+            <h3>Website Sederhana</h3>
+            <p class="muted">Situs profil / portofolio menggunakan HTML/CSS, hosting gratis di GitHub Pages.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card side" id="portfolio">
+        <h2 style="margin-top:0">Portfolio</h2>
+        <div class="portfolio-grid">
+          <!-- Replace src with your images or screenshots of projects -->
+          <div class="project">
+            <img src="https://via.placeholder.com/400x240.png?text=Poster+1" alt="Poster 1">
+            <div>
+              <strong>Poster Event Kampus</strong>
+              <div class="muted">Desain poster A3 — revisi 2x</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="https://via.placeholder.com/400x240.png?text=Landing+Page" alt="Landing Page">
+            <div>
+              <strong>Landing Page Produk</strong>
+              <div class="muted">Landing page responsive, form kontak aktif</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="https://via.placeholder.com/400x240.png?text=Poster+2" alt="Poster 2">
+            <div>
+              <strong>Poster Promo</strong>
+              <div class="muted">File PNG & source file Canva disertakan</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="https://via.placeholder.com/400x240.png?text=Website" alt="Website">
+            <div>
+              <strong>Website Profil</strong>
+              <div class="muted">HTML + CSS, deploy GitHub Pages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="contact">
+        <h2 style="margin-top:0">Kontak & Cara Pesan</h2>
+        <ol style="margin:8px 0 0 18px;color:var(--muted)">
+          <li>Buka tombol "Pesan Sekarang" (WhatsApp) atau hubungi via IG</li>
+          <li>Kirim brief: jenis desain, ukuran, teks, deadline</li>
+          <li>Konfirmasi & bayar via transfer / OVO / GoPay (atau sistem DP sederhana)</li>
+        </ol>
+
+        <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="https://wa.me/6282124016379?text=Halo%20Ariski,%20saya%20mau%20pesan%20desain" target="_blank">Hubungi WA</a>
+          <a class="btn-ghost" href="mailto:ariski@example.com">Email</a>
+        </div>
+
+        <p class="muted" style="margin-top:12px">Catatan: Ganti nomor WA di link dengan nomor kamu. Untuk kirim file, minta klien unggah ke Google Drive atau kirim via WhatsApp.</p>
+      </div>
+    </div>
+
+    <footer>
+      © <strong>Ariski Putra</strong> • Desain & Web — Siap bantu proyek kecil sampai menengah
+    </footer>
+  </div>
+</body>
+</html>
